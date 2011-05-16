@@ -1,18 +1,13 @@
-############################################################################
+require 'ghaki/app/mixable'
 require 'ghaki/namer/files/app'
 
-############################################################################
-module Ghaki module Namer
-  module Files
-    module Mixin
+module Ghaki #:nodoc:
+module Namer #:nodoc:
+module Files #:nodoc:
 
-      attr_writer :file_namer
+module Mixin
+  include Ghaki::App::Mixable
+  app_mixin_accessor App, :file_namer
+end
 
-      def file_namer
-        @file_namer ||= Ghaki::Namer::Files::App.instance.file_namer
-      end
-
-    end # helper
-  end # namespace
-end end # package
-############################################################################
+end end end 

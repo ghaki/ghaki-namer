@@ -1,4 +1,3 @@
-require 'mocha_helper'
 require 'ghaki/namer/files/base'
 
 module Ghaki module Namer module Files module BaseTesting
